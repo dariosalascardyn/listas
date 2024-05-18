@@ -1,0 +1,51 @@
+import os, time
+
+os.system("cls")
+
+nombreusuarios = []
+contraseñausuario = []
+
+banderaopcion1= False
+banderamenu = True
+while banderamenu:
+  os.system("cls")
+  print("1.- Iniciar sesion")
+  print("2.- Registrar usuario")
+  print("3.- Eliminar usuario")
+  print("4.- Salir")
+  try:
+    opcion = int(input("Seleccione una opcion: \n"))
+    if opcion == 1:
+      #if para validar bandera 2 while para inicio de sesion
+        usuarioinicio = input("ingrese su usuario:\t")
+        contraseñainicio=input("ingrese su contraseña:\t")
+        if (usuarioinicio in nombreusuarios) and (contraseñainicio in contraseñausuario):
+          print("sesion iniciada")
+        else:
+          print("error de de ususario o contraseña")
+      
+        print("no existen usuarios")
+        time.sleep(2)
+        
+      
+    elif opcion == 2:
+      #crear bandera al final para iniciar opcion 1
+      os.system("cls")
+      print("\t\tRegistro de ususario")
+      nombres = input("ingrese nombre de usuario:\t")
+      nombreusuarios.append(nombres)
+      contraseñas = input("ingrese su contraseña:\t\t")
+      contraseñausuario.append(contraseñas)
+      print("usuario registrado")
+      print(nombreusuarios, contraseñausuario)
+      print(zip.(contras))
+      time.sleep(3)
+      
+    elif opcion == 3:
+      print("opcion no valida")
+    elif opcion == 4:
+      print("saliendo del sistema")
+      banderamenu= False
+      
+  except:
+    print("opcion no valida")
